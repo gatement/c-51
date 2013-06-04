@@ -1,19 +1,19 @@
-BL51 BANKED LINKER/LOCATER V4.13                                                        06/02/2013  16:59:14  PAGE 1
+BL51 BANKED LINKER/LOCATER V4.13                                                        06/04/2013  08:37:24  PAGE 1
 
 
 BL51 BANKED LINKER/LOCATER V4.13, INVOKED BY:
-C:\DEV\KEIL\C51\BIN\BL51.EXE main.obj TO c51 RAMSIZE (256)
+C:\DEV\KEIL\C51\BIN\BL51.EXE beep_simple.obj TO c51 RAMSIZE (256)
 
 
 MEMORY MODEL: SMALL
 
 
 INPUT MODULES INCLUDED:
-  main.obj (MAIN)
+  beep_simple.obj (BEEP_SIMPLE)
   C:\DEV\KEIL\C51\LIB\C51S.LIB (?C_STARTUP)
 
 
-LINK MAP OF MODULE:  c51 (MAIN)
+LINK MAP OF MODULE:  c51 (BEEP_SIMPLE)
 
 
             TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
@@ -26,29 +26,30 @@ LINK MAP OF MODULE:  c51 (MAIN)
             * * * * * * *   C O D E   M E M O R Y   * * * * * * *
             CODE    0000H     0003H     ABSOLUTE     
             CODE    0003H     000CH     UNIT         ?C_C51STARTUP
-            CODE    000FH     0005H     UNIT         ?PR?MAIN?MAIN
+            CODE    000FH     0004H     UNIT         ?PR?MAIN?BEEP_SIMPLE
 
 
 
-OVERLAY MAP OF MODULE:   c51 (MAIN)
+OVERLAY MAP OF MODULE:   c51 (BEEP_SIMPLE)
 
 
 SEGMENT
   +--> CALLED SEGMENT
 ---------------------
 ?C_C51STARTUP
-  +--> ?PR?MAIN?MAIN
+  +--> ?PR?MAIN?BEEP_SIMPLE
 
 
 
-SYMBOL TABLE OF MODULE:  c51 (MAIN)
+SYMBOL TABLE OF MODULE:  c51 (BEEP_SIMPLE)
 
   VALUE           TYPE          NAME
   ----------------------------------
 
-  -------         MODULE        MAIN
+  -------         MODULE        BEEP_SIMPLE
   C:0000H         SYMBOL        _ICE_DUMMY_
   D:0090H         PUBLIC        P1
+  D:00A0H         PUBLIC        P2
   D:00B0H         PUBLIC        P3
   B:00B0H.4       PUBLIC        T0
   B:00D0H.6       PUBLIC        AC
@@ -58,16 +59,17 @@ SYMBOL TABLE OF MODULE:  c51 (MAIN)
   D:00A8H         PUBLIC        IE
   B:00C8H.6       PUBLIC        EXF2
   B:00B0H.7       PUBLIC        RD
+BL51 BANKED LINKER/LOCATER V4.13                                                      06/04/2013  08:37:24  PAGE 2
+
+
   B:00A8H.4       PUBLIC        ES
-BL51 BANKED LINKER/LOCATER V4.13                                                      06/02/2013  16:59:14  PAGE 2
-
-
   D:00B8H         PUBLIC        IP
   B:0098H.0       PUBLIC        RI
   B:00B0H.2       PUBLIC        INT0
   B:00D0H.7       PUBLIC        CY
   B:0098H.1       PUBLIC        TI
   B:00B0H.3       PUBLIC        INT1
+  B:00A0H.3       PUBLIC        beep
   B:00B8H.4       PUBLIC        PS
   B:0090H.1       PUBLIC        T2EX
   B:00D0H.2       PUBLIC        OV
@@ -115,14 +117,14 @@ SYMBOL TABLE OF MODULE:  c51 (MAIN)
   B:00D0H.5       PUBLIC        F0
   D:00D0H         PUBLIC        PSW
   -------         PROC          MAIN
-  C:000FH         LINE#         3
-  C:000FH         LINE#         4
   C:000FH         LINE#         5
-  C:0012H         LINE#         6
-BL51 BANKED LINKER/LOCATER V4.13                                                      06/02/2013  16:59:14  PAGE 3
+  C:000FH         LINE#         6
+BL51 BANKED LINKER/LOCATER V4.13                                                      06/04/2013  08:37:24  PAGE 3
 
 
+  C:000FH         LINE#         7
+  C:0011H         LINE#         9
   -------         ENDPROC       MAIN
-  -------         ENDMOD        MAIN
+  -------         ENDMOD        BEEP_SIMPLE
 
 LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
