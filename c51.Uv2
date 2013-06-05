@@ -95,6 +95,6 @@ Options 1,0,0  // Target 'Target 1'
  LX51DAS ()
  LX51IDS ()
   OPTDL (S8051.DLL)()(DP51.DLL)(-p52)(S8051.DLL)()(TP51.DLL)(-p52)
-  OPTDBG 510,0,()()()()()()()()()() ()()()()
+  OPTDBG 2046,0,()()()()()()()()()() ()()()()
 EndOpt
 
