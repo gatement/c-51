@@ -59,7 +59,7 @@ void show(float fnum, uchar decimal_count)
 
 void display(uchar num, uchar pos, uchar decimal_count)
 {
-	if(num != 0)
+	if(num != 0 || pos == 6)
 	{
 		uchar val = table[num];
 

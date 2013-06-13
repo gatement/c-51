@@ -56,7 +56,7 @@ void show(ulong num)
 
 void display(uchar num, uchar pos)
 {
-	if(num != 0)
+	if(num != 0 || pos == 6)
 	{
 		P0 = table[num];
 		dula = 1;
